@@ -1,0 +1,162 @@
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#00BFFF"
+    tools:context="com.mjas.myweatherapp.WeatherActivity$PlaceholderFragment" >
+
+   
+    
+     <TextView
+        android:id="@+id/locationLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/timeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/locationLabel"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="?android:attr/textAppearanceLargeInverse" />
+    
+    
+    <!-- Image weather condition -->
+
+    <ImageView
+        android:id="@+id/imgsunny"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/timeLabel"
+        android:layout_alignParentLeft="True"
+        android:src="@drawable/sunny"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imgcloudy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/timeLabel"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/cloudy"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imgrainy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/timeLabel"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/rainy"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imgsnowy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/timeLabel"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/snowy"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imgsunandcloudy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_below="@+id/timeLabel"
+       android:layout_alignParentLeft="true"
+        android:src="@drawable/sunandcloudy"
+        android:visibility="invisible" />
+
+    <ImageView android:id="@+id/imgthunder" 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:layout_below="@+id/timeLabel"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/thunder" 
+        android:visibility="invisible" />
+ 
+    <TextView
+        android:id="@+id/temperatureLabelH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/timeLabel"
+         android:layout_alignParentRight="true"
+        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+        android:textSize="20sp" />
+    
+    <TextView
+        android:id="@+id/temperatureLabelL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/temperatureLabelH"
+         android:layout_alignParentRight="true"
+        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+        android:textSize="20sp" />
+     
+    <TextView
+        android:id="@+id/humidityValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/temperatureLabelL"
+         android:layout_alignParentRight="true"
+        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+        android:textSize="20sp" />
+
+    
+     <TextView
+        android:id="@+id/precipValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/humidityValue"
+         android:layout_alignParentRight="true"
+        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+        android:textSize="20sp" />
+    
+     
+    <TextView
+        android:id="@+id/summaryLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/precipValue"
+         android:layout_alignParentRight="true"
+        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+        android:textSize="20sp" />
+     <TextView
+        android:id="@+id/windValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/summaryLabel"
+         android:layout_alignParentRight="true"
+        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+        android:textSize="20sp" />
+    
+     
+    <TextView
+        android:id="@+id/highTemperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/windValue"
+         android:layout_alignParentRight="true"
+        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+        android:textSize="20sp" />
+    
+     <TextView
+        android:id="@+id/lowTemperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/highTemperature"
+         android:layout_alignParentRight="true"
+        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+        android:textSize="20sp" />
+     
+     
+     
+</RelativeLayout>

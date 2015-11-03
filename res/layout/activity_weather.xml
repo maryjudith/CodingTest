@@ -18,144 +18,160 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge" />
+     
+     <TextView
+        android:id="@+id/blankLabel1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/locationLabel"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
         android:id="@+id/timeLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/locationLabel"
+        android:layout_below="@+id/blankLabel1"
         android:layout_centerHorizontal="true"
-        android:textAppearance="?android:attr/textAppearanceLargeInverse" />
+        android:textAppearance="?android:attr/textAppearanceMediumInverse" />
     
-    
+     <TextView
+        android:id="@+id/blankLabel2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:layout_below="@+id/timeLabel"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+     
     <!-- Image weather condition -->
-
-    <ImageView
-        android:id="@+id/imgsunny"
+     <ImageView
+        android:id="@+id/imageID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/timeLabel"
-        android:layout_alignParentLeft="True"
-        android:src="@drawable/sunny"
-        android:visibility="invisible" />
-
-    <ImageView
-        android:id="@+id/imgcloudy"
-        android:layout_width="wrap_content"
+        android:layout_below="@+id/blankLabel2"
+        android:layout_centerHorizontal="true" />
+       
+        
+<!-- <TextView
+        android:id="@+id/blankLabel3"
+        android:layout_width="15dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/timeLabel"
-        android:layout_alignParentLeft="true"
-        android:src="@drawable/cloudy"
-        android:visibility="invisible" />
-
-    <ImageView
-        android:id="@+id/imgrainy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/timeLabel"
-        android:layout_alignParentLeft="true"
-        android:src="@drawable/rainy"
-        android:visibility="invisible" />
-
-    <ImageView
-        android:id="@+id/imgsnowy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/timeLabel"
-        android:layout_alignParentLeft="true"
-        android:src="@drawable/snowy"
-        android:visibility="invisible" />
-
-    <ImageView
-        android:id="@+id/imgsunandcloudy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-       android:layout_below="@+id/timeLabel"
-       android:layout_alignParentLeft="true"
-        android:src="@drawable/sunandcloudy"
-        android:visibility="invisible" />
-
-    <ImageView android:id="@+id/imgthunder" 
-        android:layout_width="wrap_content" 
-        android:layout_height="wrap_content" 
-        android:layout_below="@+id/timeLabel"
-        android:layout_alignParentLeft="true"
-        android:src="@drawable/thunder" 
-        android:visibility="invisible" />
- 
+         android:layout_toRightOf="@+id/imageID"
+        android:textAppearance="?android:attr/textAppearanceLarge" /> -->
+   
+   
+    
     <TextView
-        android:id="@+id/temperatureLabelH"
+        android:id="@+id/temperatureLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/timeLabel"
-         android:layout_alignParentRight="true"
+        android:layout_below="@+id/imageID"
+          android:layout_centerHorizontal="true"
         android:textAppearance="?android:attr/textAppearanceMediumInverse"
         android:textSize="20sp" />
     
-    <TextView
-        android:id="@+id/temperatureLabelL"
+    
+     <TextView
+        android:id="@+id/summaryLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/temperatureLabelH"
-         android:layout_alignParentRight="true"
+       android:layout_below="@+id/temperatureLabel"
+           android:layout_centerHorizontal="true"
         android:textAppearance="?android:attr/textAppearanceMediumInverse"
-        android:textSize="20sp" />
+        android:textSize="17sp" />
+     
+   <!--   <TextView
+        android:id="@+id/blankLabel3"
+        android:layout_width="15dp"
+        android:layout_height="wrap_content"
+         android:layout_below="@+id/summaryLabel"
+        android:textAppearance="?android:attr/textAppearanceLarge" /> -->
+     <TextView
+        android:id="@+id/blankLabel4"
+        android:layout_width="15dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/summaryLabel"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+     
+     <RelativeLayout 
+          android:id="@+id/relative1L"
+          android:layout_width="match_parent"
+    	  android:layout_height="wrap_content"
+          android:layout_below="@+id/blankLabel4"
+           android:layout_centerHorizontal="true">
+          
+   <TextView
+        android:id="@+id/humidityText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignBaseline="@+id/humidityValue"
+        android:text="Humidity: "
+        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+        android:textSize="15sp" />
      
     <TextView
         android:id="@+id/humidityValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/temperatureLabelL"
-         android:layout_alignParentRight="true"
+        
+       android:layout_toRightOf="@+id/humidityText"
         android:textAppearance="?android:attr/textAppearanceMediumInverse"
-        android:textSize="20sp" />
-
+        android:textSize="15sp" />
     
+     
+
+    </RelativeLayout>
+    <RelativeLayout 
+          android:id="@+id/relative2L"
+          android:layout_width="match_parent"
+    	  android:layout_height="wrap_content"
+          android:layout_below="@+id/relative1L"
+           android:layout_centerHorizontal="true">
+     <TextView
+        android:id="@+id/precipText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_centerHorizontal="true"
+        android:layout_alignBaseline="@+id/precipValue"
+        android:text="Preci Probability: "
+        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+        android:textSize="15sp" />
      <TextView
         android:id="@+id/precipValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/humidityValue"
-         android:layout_alignParentRight="true"
+       android:layout_toRightOf="@+id/precipText"
+         
         android:textAppearance="?android:attr/textAppearanceMediumInverse"
-        android:textSize="20sp" />
-    
+        android:textSize="15sp" />
+     </RelativeLayout>
      
-    <TextView
-        android:id="@+id/summaryLabel"
+   
+      <RelativeLayout 
+          android:id="@+id/relative3L"
+          android:layout_width="match_parent"
+    	  android:layout_height="wrap_content"
+          android:layout_below="@+id/relative2L"
+            android:layout_centerHorizontal="true">
+     <TextView
+        android:id="@+id/windText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/precipValue"
-         android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:layout_alignBaseline="@+id/windValue"
+        android:text="Wind: "
         android:textAppearance="?android:attr/textAppearanceMediumInverse"
-        android:textSize="20sp" />
+        android:textSize="15sp" />
      <TextView
         android:id="@+id/windValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/summaryLabel"
-         android:layout_alignParentRight="true"
+       android:layout_toRightOf="@+id/windText"
+          
         android:textAppearance="?android:attr/textAppearanceMediumInverse"
-        android:textSize="20sp" />
+        android:textSize="15sp" />
     
-     
-    <TextView
-        android:id="@+id/highTemperature"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/windValue"
-         android:layout_alignParentRight="true"
-        android:textAppearance="?android:attr/textAppearanceMediumInverse"
-        android:textSize="20sp" />
+     </RelativeLayout>
     
-     <TextView
-        android:id="@+id/lowTemperature"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/highTemperature"
-         android:layout_alignParentRight="true"
-        android:textAppearance="?android:attr/textAppearanceMediumInverse"
-        android:textSize="20sp" />
      
      
      

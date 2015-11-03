@@ -11,79 +11,21 @@
    
     
     <TextView
-        android:id="@+id/timeLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
- 
-    <TextView
-        android:id="@+id/temperatureLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/timeLabel"
-        android:layout_centerHorizontal="true"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textSize="13sp" />
-    
-     
-    <TextView
-        android:id="@+id/humidityValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/temperatureLabel"
-        android:layout_centerHorizontal="true"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textSize="13sp" />
-
-    
-     <TextView
-        android:id="@+id/precipValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/humidityValue"
-        android:layout_centerHorizontal="true"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textSize="13sp" />
-    
-     
-    <TextView
-        android:id="@+id/summaryLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/precipValue"
-        android:layout_centerHorizontal="true"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textSize="13sp" />
-     <TextView
-        android:id="@+id/windValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/summaryLabel"
-        android:layout_centerHorizontal="true"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textSize="13sp" />
-    
-     
-    <TextView
         android:id="@+id/highTemperature"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/windValue"
-        android:layout_centerHorizontal="true"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textSize="13sp" />
+        android:layout_below="@+id/relative3L"
+         android:layout_alignParentRight="true"
+        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+        android:textSize="15sp" />
     
      <TextView
         android:id="@+id/lowTemperature"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/highTemperature"
-        android:layout_centerHorizontal="true"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textSize="13sp" />
-     
-     
+         android:layout_alignParentRight="true"
+        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+        android:textSize="15sp" />
      
 </RelativeLayout>

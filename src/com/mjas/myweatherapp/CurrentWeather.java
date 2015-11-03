@@ -10,7 +10,7 @@ public class CurrentWeather {
 	 private int mIconId;
 	 private String mSummary;
 	 private double mTemperatureH;
-	 private double mTemperatureL;
+	 private double mTemperature;
 	 private String mTimeZone;
 	 private double mWindSpeed;
 	 private double mWindBearing;
@@ -61,12 +61,12 @@ public class CurrentWeather {
 	        mTemperatureH = temperature;
 	    }
 
-	    public double getTemperatureL() {
-	        return (int)Math.round(mTemperatureL);
+	    public double getTemperature() {
+	        return (int)Math.round(mTemperature);
 	    }
 
-	    public void setTemperatureL(double temperature) {
-	        mTemperatureL = temperature;
+	    public void setTemperature(double temperature) {
+	        mTemperature = temperature;
 	    }
 	    public String getTimeZone() {
 	        return mTimeZone;

@@ -9,6 +9,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.os.Handler;
+import android.renderscript.Sampler.Value;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -52,8 +53,8 @@ public class WeatherActivity extends AppCompatActivity {
 
 		private TextView mTimeLabel;
 
-		private TextView mTempuratureLabelH;
-		private TextView mTempuratureLabelL;
+		//private TextView mTempuratureLabelH;
+		private TextView mTempuratureLabel;
 
 		private TextView mHumidityValue;
 
@@ -74,17 +75,7 @@ public class WeatherActivity extends AppCompatActivity {
 		private TextView mLowTemperature;
 		private TextView mLocation;
 
-		private ImageView mIconImageView1;
-
-		private ImageView mIconImageView2;
-
-		private ImageView mIconImageView3;
-
-		private ImageView mIconImageView4;
-
-		private ImageView mIconImageView5;
-
-		private ImageView mIconImageView6;
+		
 		
 		
 		
@@ -100,15 +91,12 @@ public class WeatherActivity extends AppCompatActivity {
 			
 	        mTimeLabel = (TextView)findViewById(R.id.timeLabel);
 	       // mTempuratureLabelH = (TextView) findViewById(R.id.temperatureLabelH);
-	        mTempuratureLabelL = (TextView) findViewById(R.id.temperatureLabelL);
+	        mTempuratureLabel = (TextView) findViewById(R.id.temperatureLabel);
 	        mHumidityValue= (TextView) findViewById(R.id.humidityValue);
 	        mPrecipValue= (TextView) findViewById(R.id.precipValue);
 	        mSummaryLabel= (TextView) findViewById(R.id.summaryLabel);
-	        mIconImageView1 = (ImageView) findViewById(R.id.imgsunny);
-	        mIconImageView2 = (ImageView) findViewById(R.id.imgcloudy);
-	        mIconImageView3 = (ImageView) findViewById(R.id.imgrainy);
-	        mIconImageView4 = (ImageView) findViewById(R.id.imgsnowy);
-	        mIconImageView5 = (ImageView) findViewById(R.id.imgsunandcloudy);
+	        mIconImageView = (ImageView) findViewById(R.id.imageID);
+	        
 	       // mIconImageView6 = (ImageView) findViewById(R.id.imgthunder);
 	        
 	        
@@ -238,9 +226,9 @@ public class WeatherActivity extends AppCompatActivity {
     	        currentWeather.setPrecipChance(currently.getDouble("precipProbability"));;
     	        currentWeather.setSummary(currently.getString("summary"));
     	       
-    	        fahrenheit=((currently.getDouble("temperature")-32)*5/9);
+    	        fahrenheit=(currently.getDouble("temperature")-32)*5/9;
     	        currentWeather.setTemperatureH(fahrenheit);
-    	        currentWeather.setTemperatureL(fahrenheit);
+    	        currentWeather.setTemperature(fahrenheit);
     	        //currentWeather.setTemperatureL(currently.getDouble("temperature"));
     	        currentWeather.setTimeZone(timezone);
     	        currentWeather.setWindSpeed(currently.getDouble("windSpeed"));
@@ -261,13 +249,16 @@ public class WeatherActivity extends AppCompatActivity {
 
 	     private void updateDisplay1() {
 	    	 
+	    	
+	    	 
 	    	//DateFormat df = DateFormat.getDateTimeInstance();
 	    	 String currentDateTimeString = DateFormat.getDateTimeInstance().format(new Date());
 
-	    	 DateFormat dateFormatter = new SimpleDateFormat("yyyyMMdd hhmmss");
+	    	 DateFormat dateFormatter = new SimpleDateFormat("yyyyMMdd");
 	    	 dateFormatter.setLenient(false);
 	    	 Date today = new Date();
 	    	 String dt = dateFormatter.format(today);
+	    	String strSummary="";
 	    	
 	    	mLocation.setText(mCurrentWeather.getTimeZone()); 
 	    	
@@ -275,29 +266,37 @@ public class WeatherActivity extends AppCompatActivity {
 	    	mTimeLabel.setText(currentDateTimeString);
 	    	//mTimeLabel.setText(dt);
 	        //mTempuratureLabelH.setText(mCurrentWeather.getTemperatureH() + "C");
-	        mTempuratureLabelL.setText(mCurrentWeather.getTemperatureL() + "C");
-	        mHumidityValue.setText(mCurrentWeather.getHumidity() + "%");
+	    	
+	        mTempuratureLabel.setText(mCurrentWeather.getTemperature() + "℃");
+	        mHumidityValue.setText( mCurrentWeather.getHumidity() + "%");
 	        mPrecipValue.setText(mCurrentWeather.getPrecipChance() + "%");
 	        mWindValue.setText(mCurrentWeather.getWindSpeed()+ " MPH");
 	       
 	        mSummaryLabel.setText(mCurrentWeather.getSummary());
-	        if (mCurrentWeather.getSummary()=="rain")
+	      
+	       strSummary=mCurrentWeather.getSummary().toString();
+	        
+	        if (strSummary.equals("Rain"))
 	        {
-	        	mIconImageView3.setVisibility(0);
+	        	mIconImageView.setImageResource(R.drawable.rainy);
 	        }
 	        else
-	        	 if (mCurrentWeather.getSummary()=="cloudy")
+	        	 if (strSummary.equals("Partly Cloudy"))
 	 	        {
-	 	        	mIconImageView2.setVisibility(0);
+	        		 mIconImageView.setImageResource(R.drawable.sunandcloudy);
 	 	        }
 	        	 else
-	        		 if (mCurrentWeather.getSummary()=="heavy rain")
+	        		 if (strSummary.equals("Heavy rain"))
 	     	        {
-	     	        	mIconImageView5.setVisibility(0);
+	        			 mIconImageView.setImageResource(R.drawable.thunder);
 	     	        }
 	        		 else
-	        			 	mIconImageView1.setVisibility(0);
-			
+	        			 if  (strSummary.equals("Drizzle"))
+	 	     	        {
+	 	        			 mIconImageView.setImageResource(R.drawable.snowy);
+	 	     	        }
+	        			 else
+	        			 mIconImageView.setImageResource(R.drawable.cloudy);
 	      
 	    }
 	     

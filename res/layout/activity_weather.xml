@@ -32,7 +32,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/blankLabel1"
         android:layout_centerHorizontal="true"
-        android:textAppearance="?android:attr/textAppearanceMediumInverse" />
+        android:textAppearance="?android:attr/textAppearanceMedium" />
     
      <TextView
         android:id="@+id/blankLabel2"
@@ -65,7 +65,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageID"
           android:layout_centerHorizontal="true"
-        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         android:textSize="20sp" />
     
     
@@ -75,7 +75,7 @@
         android:layout_height="wrap_content"
        android:layout_below="@+id/temperatureLabel"
            android:layout_centerHorizontal="true"
-        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         android:textSize="17sp" />
      
    <!--   <TextView
@@ -105,7 +105,7 @@
         android:layout_centerHorizontal="true"
         android:layout_alignBaseline="@+id/humidityValue"
         android:text="Humidity: "
-        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         android:textSize="15sp" />
      
     <TextView
@@ -114,7 +114,7 @@
         android:layout_height="wrap_content"
         
        android:layout_toRightOf="@+id/humidityText"
-        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         android:textSize="15sp" />
     
      
@@ -133,7 +133,7 @@
        android:layout_centerHorizontal="true"
         android:layout_alignBaseline="@+id/precipValue"
         android:text="Preci Probability: "
-        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         android:textSize="15sp" />
      <TextView
         android:id="@+id/precipValue"
@@ -141,7 +141,7 @@
         android:layout_height="wrap_content"
        android:layout_toRightOf="@+id/precipText"
          
-        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         android:textSize="15sp" />
      </RelativeLayout>
      
@@ -159,7 +159,7 @@
         android:layout_centerHorizontal="true"
         android:layout_alignBaseline="@+id/windValue"
         android:text="Wind: "
-        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         android:textSize="15sp" />
      <TextView
         android:id="@+id/windValue"
@@ -167,7 +167,7 @@
         android:layout_height="wrap_content"
        android:layout_toRightOf="@+id/windText"
           
-        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         android:textSize="15sp" />
     
      </RelativeLayout>
